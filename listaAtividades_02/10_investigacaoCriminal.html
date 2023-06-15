@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+    - "Telefonou para a vítima?"
+    - "Esteve no local do crime?"
+    - "Mora perto da vítima?"
+    - "Devia para a vítima?"
+    - "Já trabalhou com a vítima?"
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    */
+
+    //ENTRADA
+    alert('isso é uma investigação, responda com sim ou não')
+    const p1 = prompt('vocẽ telefonou para a  vítima?').trim().toLowerCase()
+    const p2 = prompt('esteve no local do crime?').trim().toLowerCase()
+    const p3 = prompt('mora perto da vítima?').trim().toLowerCase()
+    const p4 = prompt('devia para a vitima?').trim().toLowerCase()
+    const p5 = prompt('já trabalhou para a vítima?').trim().toLowerCase()
+    //PROCESSAMENTO
+    var resultado = 0
+
+    if (Number.isNaN(p1) && Number.isNaN(p2)&& Number.isNaN(p3)&& Number.isNaN(p4)&& Number.isNaN(p5)) {
+        if (p1 && p2 && p3 && p4 && p5 === "sim") {
+            alert('você é o assassino!')
+        }
+        if (p1 === "sim") {
+            resultado++
+        }
+        if (p2 === "sim") {
+            resultado++
+        }
+        if (p3 === "sim") {
+            resultado++
+        }
+        if (p4 === "sim") {
+            resultado++
+        }
+        if (p5 === "sim") {
+            resultado++
+        }
+        let conclusao = "Você é "
+        if (resultado < 2) {
+            conclusao += "inocente."
+        }
+        else if (resultado === 2) {
+            conclusao += "suspeito(a)."
+        }
+        else if (resultado == 4 && resultado == 3) {
+            conclusao += "cúmplice."
+        }
+    }
+    else {
+        alert(`valores inválidos!!!!!!!!!!!!!!!!!!!!!!!`);
+    }
+    alert(`${conclusao}`)
+    //SAÍDA
+
+</script>
