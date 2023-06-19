@@ -10,15 +10,12 @@
     let preco = parseFloat(prompt("Digite o preço do produto: "));
     let novoPreco;
 
-    if (Number.isSafeInteger(preco)) {if (preco <= 280) {
+   {if (preco <= 280) 
      novoPreco = preco * 1.2;
     } else if (preco <= 700) {
      novoPreco = preco * 1.15;
     } else if (preco <= 1500) {
      novoPreco = preco * 1.1;
-    } else {
-     novoPreco = preco * 1.05;
-    }
     }
 
      alert(`O novo preço do produto é R$ ${novoPreco.toFixed(2)}`);
