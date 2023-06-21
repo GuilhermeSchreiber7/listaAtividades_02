@@ -10,7 +10,8 @@
 let mes = prompt("Digite o mês atual (1-12): ").trim();
 let estacao;
 
-if (hemisferio === 'N') {
+
+{if (hemisferio === 'N') {
   if (mes >= 3 && mes <= 5) {
     estacao = "Primavera";
   } else if (mes >= 6 && mes <= 8) {
@@ -36,6 +37,7 @@ if (hemisferio === 'N') {
 
 if (estacao !== undefined) {
   alert(`A estação do ano correspondente é: ${estacao}`);
+}
 }
     //PROCESSAMENTO
 

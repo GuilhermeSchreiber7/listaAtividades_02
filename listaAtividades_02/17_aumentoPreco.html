@@ -10,11 +10,13 @@
     let preco = parseFloat(prompt("Digite o preço do produto: "));
     let novoPreco;
 
-   {if (preco <= 280) 
+   if (preco <= 280) {
      novoPreco = preco * 1.2;
-    } else if (preco <= 700) {
+    }
+     else if (preco <= 700) {
      novoPreco = preco * 1.15;
-    } else if (preco <= 1500) {
+    }
+     else if (preco <= 1500) {
      novoPreco = preco * 1.1;
     }
 
